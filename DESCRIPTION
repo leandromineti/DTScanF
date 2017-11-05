@@ -1,12 +1,15 @@
 Package: DTScanF
 Type: Package
-Title: What the package does (short line)
+Title: Implementation a time series forecasting algorithm.
 Version: 1.0
 Date: 2017-10-24
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Authors@R: c(
+    person("Leandro", "Mineti", email = "leandromineti@gmail.com", role = c("aut", "cre")),
+    person("Marcelo", "Costa", email = "macosta.est@gmail.com", role = c("aut"))
+    )
+Maintainer: Leandro Mineti <leandromineti@gmail.com>
+Description: Implementation a time series forecasting algorithm.
+License: Proprietary.
 Imports: Rcpp (>= 0.12.13)
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 6.0.1

@@ -3,13 +3,20 @@
 // we only include RcppArmadillo.h which pulls Rcpp.h in for us
 #include "RcppArmadillo.h"
 
-//' Return seq
+//' R2 Sequence
 //' 
-//' Some description here
-//' @title Return seq
+//' Search for the most similar time windows in a time series.
+//' 
 //' @param wind A matrix to feed the regression.
 //' @param window The size of the window
-//' @return a list
+//' 
+//' @return a \code{list} containing:
+//' \itemize{
+//'   \item sequence: a \code{data.frame} indicating the starting and stoping 
+//'   indexes and R2 for the calculated model.
+//'   \item y: the target window. 
+//' }
+//' 
 //' @author Leandro Mineti
 // [[Rcpp::export]]
 Rcpp::List rcpp_seqr2(const arma::mat & wind, const int & window) {
@@ -18,7 +25,7 @@ Rcpp::List rcpp_seqr2(const arma::mat & wind, const int & window) {
   int i = 0, n = wind.n_rows, c = wind.n_cols;
   double erro, sqt;
   
-  arma::mat    X(j,c);
+  arma::mat X(j,c);
   arma::colvec y = (wind.col(1)).tail(j);
   arma::colvec coef(c);
   arma::colvec residual(j); 

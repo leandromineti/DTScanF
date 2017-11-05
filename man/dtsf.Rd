@@ -18,10 +18,15 @@ dtsf(ts, poli, best, window, forecast)
 \item{forecast}{number of data points to be forecasted.}
 }
 \value{
-\code{list}
+a \code{list} with two objects:
+\itemize{
+  \item sequence: a \code{data.frame} indicating the starting and stoping 
+  indexes and R2 for the calculated model.
+  \item forecast: a \code{matrix} of "best" rows and "forecast" columns.
+}
 }
 \description{
-Implementation a time series forecasting algorithm
+Implementation a time series forecasting algorithm.
 }
 \examples{
 

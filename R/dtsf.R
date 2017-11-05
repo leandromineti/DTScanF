@@ -1,6 +1,6 @@
 #' DTSF
 #' 
-#' Implementation a time series forecasting algorithm
+#' Implementation a time series forecasting algorithm.
 #'
 #' @author leandromineti@gmail.com
 #'
@@ -10,7 +10,12 @@
 #' @param window an integer indicating the size of the window to match.
 #' @param forecast number of data points to be forecasted.
 #'
-#' @return \code{list} 
+#' @return a \code{list} with two objects:
+#' \itemize{
+#'   \item sequence: a \code{data.frame} indicating the starting and stoping 
+#'   indexes and R2 for the calculated model.
+#'   \item forecast: a \code{matrix} of "best" rows and "forecast" columns.
+#' } 
 #'
 #' @export
 #' 
@@ -20,8 +25,7 @@
 dtsf <- function(ts, poli, best, window, forecast) {
   
   # Data wrangling
-  train <- head(ts, -window)
-  wind <- cbind(1, train)
+  wind <- cbind(1, ts)
   while(dim(wind)[2]-1!=poli) wind <- cbind(wind, train^dim(wind)[2])
   
   # Run window through data

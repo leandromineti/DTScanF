@@ -2,7 +2,7 @@
 % Please edit documentation in R/RcppExports.R
 \name{rcpp_seqr2}
 \alias{rcpp_seqr2}
-\title{Return seq}
+\title{R2 Sequence}
 \usage{
 rcpp_seqr2(wind, window)
 }
@@ -12,13 +12,15 @@ rcpp_seqr2(wind, window)
 \item{window}{The size of the window}
 }
 \value{
-a list
+a \code{list} containing:
+\itemize{
+  \item sequence: a \code{data.frame} indicating the starting and stoping 
+  indexes and R2 for the calculated model.
+  \item y: the target window. 
+}
 }
 \description{
-Return seq
-}
-\details{
-Some description here
+Search for the most similar time windows in a time series.
 }
 \author{
 Leandro Mineti
