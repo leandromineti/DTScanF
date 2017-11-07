@@ -4,7 +4,7 @@
 \alias{dtsf}
 \title{DTSF}
 \usage{
-dtsf(ts, poli, best, window, forecast)
+dtsf(ts, poli, best, window, forecast, reg = FALSE)
 }
 \arguments{
 \item{ts}{time series.}
@@ -16,6 +16,9 @@ dtsf(ts, poli, best, window, forecast)
 \item{window}{an integer indicating the size of the window to match.}
 
 \item{forecast}{number of data points to be forecasted.}
+
+\item{reg}{logical indicating if series regularization should be performed. 
+Default = FALSE.}
 }
 \value{
 a \code{list} with two objects:
