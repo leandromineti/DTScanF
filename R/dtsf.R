@@ -22,6 +22,11 @@
 #' @export
 #' 
 #' @examples
+#' library(DTScanF)
+#' 
+#' data("curvelo", package = "DTScanF")
+#' 
+#' res <- dtsf(ts = curvelo$vento, poli = 1, best = 5, window = 24, forecast = 10)
 #'
 #' @family gbdcd
 dtsf <- function(ts, poli, best, window, forecast, reg = FALSE) {

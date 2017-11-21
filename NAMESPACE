@@ -1,3 +1,4 @@
 useDynLib(DTScanF)
 importFrom(Rcpp, evalCpp)
+importFrom("stats", "dt", "lm", "predict")
 exportPattern("^[[:alpha:]]+")
