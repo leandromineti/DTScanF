@@ -42,7 +42,7 @@ dtsf <- function(ts, poli, best, window, forecast, reg = FALSE) {
   
   # Handling polynomial order
   wind <- cbind(1, ts_reg)
-  while(dim(wind)[2]-1!=poli) wind <- cbind(wind, train^dim(wind)[2])
+  while(dim(wind)[2]-1!=poli) wind <- cbind(wind, ts_reg^dim(wind)[2])
   
   # Run window through data
   ans <- rcpp_seqr2(wind, window)
