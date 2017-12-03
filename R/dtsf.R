@@ -36,7 +36,7 @@ dtsf <- function(ts, poli, best, window, forecast, reg = FALSE) {
   # Regularization
   if(reg) {
     for(i in 2:(length(ts)-1)) {
-      ts_reg[i] <- 0.99*ts[i] + 0.005*ts[i-1] + 0.005*ts[i+1]
+      ts_reg[i] <- 0.95*ts[i] + 0.025*ts[i-1] + 0.025*ts[i+1]
     }
   }
   
