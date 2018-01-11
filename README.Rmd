@@ -17,6 +17,8 @@ An R package implementing innovative forecasting algorithm for wind time series.
 
 ## Installation
 
+Make sure you have Rtools installed.
+
 ```{r eval=FALSE}
 library(devtools)
 

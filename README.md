@@ -10,6 +10,8 @@ An R package implementing innovative forecasting algorithm for wind time series.
 Installation
 ------------
 
+Make sure you have Rtools installed.
+
 ``` r
 library(devtools)
 
@@ -31,4 +33,4 @@ par(new=T)
 matplot(t(ts_f), type = "l", ylim = c(0, 3), ylab = "", xlab = "")
 ```
 
-![](man/figures/README-unnamed-chunk-2-1.png)
+![](README_files/figure-markdown_github/unnamed-chunk-2-1.png)
