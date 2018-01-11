@@ -10,13 +10,13 @@ An R package implementing innovative forecasting algorithm for wind time series.
 Installation
 ------------
 
-Make sure you have Rtools installed.
-
 ``` r
 library(devtools)
 
 devtools::install_github("leandromineti/DTScanF")
 ```
+
+If you are a Windows user, make sure you have [Rtools](https://cran.r-project.org/bin/windows/Rtools/) installed.
 
 ``` r
 library(DTScanF)
