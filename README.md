@@ -25,12 +25,18 @@ data("curvelo", package = "DTScanF")
 
 res <- dtsf(ts = curvelo$vento, poli = 1, best = 5, window = 24, forecast = 10)
 
+# Agreggating the resulting forecasts
+forecast <- apply(res$forecast, 2, median)
+res_forecasting <- c(rep(NA, 24), forecast)
+
 ts_f <- cbind(matrix(NA, ncol = 24, nrow = 5), res$forecast)
 wind <- c(tail(curvelo$vento, 24), rep(NA, 10))
 
 plot(wind, col = "blue", type = "l", ylim = c(0, 3), ylab = "Wind", xlab = "Hour")
 par(new=T)
 matplot(t(ts_f), type = "l", ylim = c(0, 3), ylab = "", xlab = "")
+par(new=T)
+lines(res_forecasting, col = "orange")
 ```
 
 ![](README_files/figure-markdown_github/unnamed-chunk-2-1.png)
