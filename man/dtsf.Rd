@@ -21,11 +21,12 @@ dtsf(ts, poli, best, window, forecast, reg = FALSE)
 Default = FALSE.}
 }
 \value{
-a \code{list} with two objects:
+a \code{list} with three objects:
 \itemize{
   \item sequence: a \code{data.frame} indicating the starting and stoping 
   indexes and R2 for the calculated model.
-  \item forecast: a \code{matrix} of "best" rows and "forecast" columns.
+  \item forecasts: a \code{matrix} of "best" rows and "forecast" columns.
+  \item forecast: a vector containing the median of all forecasts.
 }
 }
 \description{
