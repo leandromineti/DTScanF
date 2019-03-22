@@ -2,6 +2,8 @@
 DTScanF
 =======
 
+[![DOI](https://zenodo.org/badge/108149425.svg)](https://zenodo.org/badge/latestdoi/108149425)
+
 Overview
 --------
 
